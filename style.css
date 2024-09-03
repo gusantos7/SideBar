@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background: #80808038;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100px;
+    flex-direction: column;
+    overflow-x: hidden;
+    background: #603c05;
+    padding: 25px 20px;
+    transition: all 0.4s ease;
+}
+
+.sidebar:hover{
+    width: 260px;
+}
+
+.side_header{
+    display: flex;
+    align-items: center;
+}
+
+.side_header img{
+    width: 50px;
+    border-radius: 50%;
+}
+
+.side_header h2{
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+    margin-left: 23px;
+}
+
+.side_links{
+    list-style: none;
+    margin-top: 20px;
+    height: 80%;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.side_links h4 span{
+    opacity: 0;
+}
+
+.sidebar:hover .side_links h4 span{
+    opacity: 1;
+    
+}
+.side_links h4{
+    color: white;
+    font-weight: 500;
+    margin: 10px 0;
+    white-space: nowrap;
+    position: relative;
+}
+
+.side_links .separator{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 3px;
+    border-radius: 15px;
+    transform: scaleX(1);
+    transform: translateY(-50%);
+    background: #ffd500;
+    transform-origin: right;
+    transition-duration: 0.1s;
+}
+
+.sidebar:hover .side_links .separator{
+    transition-delay: 0s;
+    transform: scaleX(0);
+}
+
+.side_links li a{
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+    color: grey;
+    font-weight: 500;
+    padding: 15px 10px;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.side_links li a:hover{
+    background: #ffffff22;
+    color: white;
+    border-radius: 4px;
+}
+
+.user_account{
+    margin-top: auto;
+    padding: 12px 10px;
+    margin-left: -10px;
+}
+
+.user_account .user_profile{
+    display: flex;
+    align-items: center;
+    color: #ffffff3a;
+}
+
+.user_profile img{
+    width: 50px;
+    border-radius: 40%;
+}
+
+.user_info {
+    margin-left: 23px;
+    white-space: nowrap;
+}
+
+.user_profile h3{
+    color: #b87005;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.user_profile span{
+    color: #b8700579;
+    font-size: 0.775rem;
+    font-weight: 600;
+    display: block;
+    margin-top: 0;
+}
+
+.sidebar:hover .user_account{
+    background: #00000081;
+    border-radius: 4px;
+}
